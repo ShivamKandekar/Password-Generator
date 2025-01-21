@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: linear-gradient(
+    90deg,
+    rgb(173, 58, 183) 0%,
+    rgb(255, 0, 81) 82%
+  );
+}
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 1%;
+  font-size: 30px;
+  color: rgb(231, 227, 227);
+  text-transform: uppercase;
+}
+
+.display-container {
+  /* border: 2px solid white; */
+  height: 64px;
+  width: 340px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  background-color: #000d1f;
+  box-shadow: 0px 5px 4px 0px rgb(119, 8, 153);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-container {
+  /* border: 2px solid white; */
+  height: 360px;
+  width: 340px;
+  /* height: 50%;
+  width: 25%; */
+  display: flex;
+  flex-direction: column;
+  background-color: #000d1f;
+  color: white;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+#btn {
+  background-color: #000d1f;
+  border: none;
+}
+
+#copyMsg {
+  position: absolute;
+  background-color: #870cbc;
+  color: yellow;
+  border-radius: 1rem;
+  font-size: 1rem;
+  /* top: -20px; */
+  top: 90px;
+  right: 500px;
+  padding: 5px 10px;
+  border: 1px solid rgb(224, 224, 207);
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+}
+
+#copyMsg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.display {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #000d1f;
+  color: rgba(232, 166, 44, 0.678);
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: rgba(232, 166, 44, 0.632);
+  opacity: 1; /* Firefox */
+}
+
+#length-div {
+  display: flex;
+}
+
+#lengthTxt {
+  font-size: 20px;
+}
+
+.length-number {
+  color: rgb(238, 179, 40);
+  font-size: 18px;
+  position: relative;
+  left: 40%;
+  font-weight: 800;
+}
+
+.slider {
+  /* z-index: 0; */
+  width: 100%;
+  height: 0.75rem;
+  appearance: none;
+  cursor: pointer;
+  background-color: #9650f7;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(103, 58, 183, 1) 0%,
+    rgba(242, 0, 255, 1) 82%
+  );
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  /* z-index: 1; */
+  appearance: none;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px yellow;
+  transition: all 100ms ease-in;
+}
+
+.slider:hover {
+  border: 2px solid yellow;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  /* z-index: 1; */
+  outline: 2px solid yellow;
+  background-color: #000d1f;
+  box-shadow: 0px 0px 20px 0px yellow;
+}
+.generateButton {
+  height: 15%;
+  color: rgb(244, 185, 45);
+  font-size: 18px;
+  background-color: #9650f7;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0px 3px 1px 0px rgb(244, 185, 45);
+}
+.generateButton:hover {
+  cursor: pointer;
+}
+
+.strength-container {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+.strength-container p {
+  font-size: 18px;
+}
+
+#strength-indicator {
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  background-color: white;
+  position: relative;
+  left: 70%;
+}
+
+.check input {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border: 2px solid rgba(0, 255, 255, 0.754);
+  cursor: pointer;
+  position: relative;
+  transform: translateY(15%);
+  border-radius: 5px;
+}
+.check input:checked {
+  background-color: aqua;
+}
+
+.check input:checked::before {
+  content: "✔";
+  position: relative;
+  font-size: 17px;
+  font-weight: 800;
+  /* right: 4px; */
+  top: -5px;
+}
